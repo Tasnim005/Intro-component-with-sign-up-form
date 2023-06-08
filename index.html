@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro component with sign up form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="intro">
+        <div class="text">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+      </section>
+
+      <section class="signup">
+        <div class="banner">
+          <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+        </div>
+
+        <form onsubmit="return validateForm(event)" novalidate>
+          <!-- We've disabled the browser built-in form validation for styling purposes -->
+          <div class="inputContainer firstName">
+            <input type="text" placeholder=" First Name" class="inputField"/>
+            <div class="errorIcon">
+              <img src="images/icon-error.svg" alt="error-icon" />
+            </div>
+            <div class="errorMessage">
+              <p>First Name can't be empty & has to be more than 2 letters</p>
+            </div>
+          </div>
+
+          <div class="inputContainer lastName">
+            <input type="text" placeholder=" Last Name" class="inputField"/>
+            <div class="errorIcon">
+              <img src="images/icon-error.svg" alt="error-icon" />
+            </div>
+            <div class="errorMessage">
+              <p>Last Name can't be empty & has to be more than 2 letters</p>
+            </div>
+          </div>
+
+          <div class="inputContainer email">
+            <input type="email" placeholder="Email Address" class="inputField"/>
+            <div class="errorIcon">
+              <img src="images/icon-error.svg" alt="error-icon" />
+            </div>
+            <div class="errorMessage">
+              <p>Looks like this is not an email</p>
+            </div>
+          </div>
+
+          <div class="inputContainer password">
+            <input type="password" placeholder="Password" class="inputField"/>
+            <div class="errorIcon">
+              <img src="images/icon-error.svg" alt="error-icon" />
+            </div>
+            <div class="errorMessage">
+              <p>Password can't be empty & has to be more than 8 letters</p>
+            </div>
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="Claim your free trial" />
+            <!-- <button type="submit">Continue</button> -->
+          </div>
+          <div class="info">
+            <p>
+              By clicking the button, you are agreeing to our
+              <a href="">Terms and Services</a>
+            </p>
+          </div>
+        </form>
+
+        <div class="success">
+          <img src="images/Smiley.svg" alt="" />
+          <h2>Success!</h2>
+          <p>We've received your submission and we'll be in touch soon</p>
+          <button>Continue</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Tasnim005">Tasnim Alam</a>.
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
